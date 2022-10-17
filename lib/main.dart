@@ -1,5 +1,6 @@
 import 'package:examples/widgets/page_view.dart';
 import 'package:examples/widgets/profile.dart';
+import 'package:examples/widgets/rect_image.dart';
 import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
@@ -42,6 +43,9 @@ class MyHomePage extends StatelessWidget {
               ProfilePicture(),
               SizedBox(height: 35,),
               PageViewExample(),
+              SizedBox(height: 35,),
+              RectImage(),
+              SizedBox(height: 35,),
             ]),
         ),
         ),
