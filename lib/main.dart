@@ -1,3 +1,4 @@
+import 'package:examples/widgets/profile.dart';
 import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: AppTheme.lightTheme,
+      theme: AppTheme.darkTheme,
       home: const MyHomePage(),
     );
   }
@@ -31,9 +32,15 @@ class MyHomePage extends StatelessWidget {
         title: const Text('My App'),
         centerTitle: true,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(12),
-        child: Placeholder(),
+      body:  Padding(
+        padding: const EdgeInsets.all(12),
+        child: SingleChildScrollView(
+          physics: const  BouncingScrollPhysics(),
+          child: Column(
+            children: const [
+              ProfilePicture(),
+            ]),
+        ),
         ),
 
     );
