@@ -1,3 +1,4 @@
+import 'package:examples/widgets/custom_button.dart';
 import 'package:examples/widgets/page_view.dart';
 import 'package:examples/widgets/profile.dart';
 import 'package:examples/widgets/rect_image.dart';
@@ -39,13 +40,19 @@ class MyHomePage extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const  BouncingScrollPhysics(),
           child: Column(
-            children: const [
-              ProfilePicture(),
-              SizedBox(height: 35,),
-              PageViewExample(),
-              SizedBox(height: 35,),
-              RectImage(),
-              SizedBox(height: 35,),
+            children:  [
+              const ProfilePicture(),
+              const SizedBox(height: 35,),
+              const PageViewExample(),
+              const SizedBox(height: 35,),
+              const RectImage(),
+              const SizedBox(height: 35,),
+              CustomButton(
+                onPressed: (){},
+                text: 'CUS.BUTTON', 
+                buttonColor: Theme.of(context).colorScheme.secondary,
+                )
+                
             ]),
         ),
         ),
